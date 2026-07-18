@@ -81,6 +81,45 @@ export const fontsList: FontDefinition[] = [
 		},
 		fallbacks: ["sans-serif"],
 	},
+	{
+		name: "Maple Mono NF CN",
+		cssVariable: "--font-maple",
+		provider: "local",
+		options: {
+			variants: [
+				{
+					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Regular.ttf"],
+				},
+			],
+		},
+		fallbacks: ["sans-serif"],
+	},
+	{
+		name: "LXWK",
+		cssVariable: "--font-lxwk",
+		provider: "local",
+		options: {
+			variants: [
+				{
+					src: ["./public/assets/fonts/LXGWWenKai-Regular.ttf"],
+				},
+			],
+		},
+		fallbacks: ["sans-serif"],
+	},
+	{
+		name: "Hoefler",
+		cssVariable: "--font-hoefler",
+		provider: "local",
+		options: {
+			variants: [
+				{
+					src: ["./public/assets/fonts/HoeflerText-Regular.ttf"],
+				},
+			],
+		},
+		fallbacks: ["sans-serif"],
+	},
 ];
 
 // ─── 字体选择与区域覆盖 ─────────────────────────────────────
@@ -89,7 +128,7 @@ export const fontConfig: FontSelectionConfig = {
 	enable: true,
 	// 当前选择的字体 CSS 变量名（对应上方 fonts 中的 cssVariable）
 	// 使用 "system" 表示系统字体（不加载任何自定义字体）
-	selected: ["system"],
+	selected: ["--font-lxwk"],
 
 	// 各区域独立字体设置（填写上方 fonts 中的 cssVariable，留空则使用全局 selected 字体）
 	// 例如：bannerTitleFont: "--font-inter", 表示主页横幅主标题使用 Inter 字体
@@ -100,12 +139,20 @@ export const fontConfig: FontSelectionConfig = {
 	// 导航栏标题字体
 	navbarTitleFont: "",
 	// 代码块字体（用于代码高亮和等宽字体场景）
-	codeFont: "--font-jetbrains-mono",
+	codeFont: "--font-maple",
 
 	// 本地字体子集化配置（构建时由 scripts/subset-fonts.ts 处理）
 	// key 为 fonts 数组中对应的 cssVariable，value 为子集化选项
 	subsetFonts: {
-		"--font-greatvibes": {
+		"--font-maple": {
+			// 额外包含的字符
+			extraChars: "",
+		},
+		"--font-lxwk": {
+			// 额外包含的字符
+			extraChars: "",
+		},
+		"--font-hoefler": {
 			// 额外包含的字符
 			extraChars: "",
 		},
