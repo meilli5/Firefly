@@ -6,17 +6,17 @@ const SITE_LANG = "zh_CN";
 
 export const siteConfig: SiteConfig = {
 	// 站点标题
-	title: "Firefly",
+	title: "Molju",
 
 	// 站点副标题
-	subtitle: "Demo site",
+	subtitle: "蓦流",
 
 	// 站点 URL
-	site_url: "https://firefly.cuteleaf.cn",
+	site_url: "https://http://blog.molju.com",
 
 	// 站点描述
 	description:
-		"Firefly 是一款基于 Astro 框架和 Fuwari 模板开发的清新美观且现代化个人博客主题模板，专为技术爱好者和内容创作者设计。该主题融合了现代 Web 技术栈，提供了丰富的功能模块和高度可定制的界面，让您能够轻松打造出专业且美观的个人博客网站。",
+		"山溪碎笔。",
 
 	// 站点关键词
 	keywords: [
@@ -32,9 +32,9 @@ export const siteConfig: SiteConfig = {
 	// 主题色
 	themeColor: {
 		// 主题色的默认色相，范围从 0 到 360。例如：红色：0，青色：200，蓝绿色：250，粉色：345
-		hue: 165,
+		hue: 290,
 		// 是否对访问者隐藏主题色选择器
-		fixed: false,
+		fixed: true,
 		// 默认模式："light" 亮色，"dark" 暗色，"system" 跟随系统
 		defaultMode: "system",
 	},
@@ -42,14 +42,14 @@ export const siteConfig: SiteConfig = {
 	// 页面整体宽度（单位：rem）
 	// 数值越大可以让页面内容区域更宽
 	// 在使用单侧栏边栏时，建议调低一些宽度以获得更好的视觉效果。
-	pageWidth: 100,
+	pageWidth: 125,
 
 	// 网站Card样式配置
 	card: {
 		// 是否开启卡片边框和阴影，开启后让网站更有立体感
-		border: false,
+		border: true,
 		// 是否让卡片风格跟随主题色相
-		followTheme: false,
+		followTheme: true,
 	},
 
 	// Favicon 配置
@@ -75,23 +75,23 @@ export const siteConfig: SiteConfig = {
 		// 4. 网络图片: { type: "url", value: "https://example.com/logo.png", alt: "Logo" }
 		logo: {
 			type: "image",
-			value: "assets/images/firefly.png",
-			alt: "🍀",
+			value: "assets/images/logo.jpg",
+			alt: "Logo",
 		},
 		// 导航栏标题
-		title: "Firefly",
+		title: "Molju",
 		// 全宽导航栏，导航栏是否占满屏幕宽度
-		widthFull: false,
+		widthFull: true,
 		// 导航菜单对齐方式，left：左对齐，center：居中
 		menuAlign: "center",
 		// 导航栏图标和标题是否跟随主题色
 		followTheme: false,
 		// 导航栏是否固定在顶部并始终可见
-		stickyNavbar: true,
+		stickyNavbar: false,
 	},
 
 	// 站点开始日期，用于统计运行天数
-	siteStartDate: "2025-01-01",
+	siteStartDate: "2026-07-18",
 
 	// 站点时区（IANA 时区字符串），用于格式化bangumi、rss里的构建日期时间等等..
 	// 示例："Asia/Shanghai", "UTC", 如果为空，则按照构建服务器的时区进行时区转换
@@ -102,15 +102,15 @@ export const siteConfig: SiteConfig = {
 		// 友链页面开关
 		friends: true,
 		// 打赏页面开关
-		sponsor: true,
+		sponsor: false,
 		// 留言板页面开关，需要配置评论系统
 		guestbook: true,
 		// 番组计划页面开关，含追番、游戏、书籍和音乐
-		bangumi: true,
+		bangumi: false,
 		// 相册页面开关
 		gallery: true,
 		// 追番页面开关
-		anime: true,
+		anime: false,
 		// 动态页面开关
 		dynamic: true,
 	},
@@ -165,7 +165,7 @@ export const siteConfig: SiteConfig = {
 		// 网格布局配置，仅在 defaultMode 为 "grid" 或允许切换布局时生效
 		grid: {
 			// 是否开启瀑布流布局，同时有封面图和无封面图的混合文章推荐开启
-			masonry: false,
+			masonry: true,
 			// 网格模式卡片最小宽度(px)，浏览器根据容器宽度自动计算列数
 			columnWidth: 320,
 		},
@@ -182,7 +182,7 @@ export const siteConfig: SiteConfig = {
 			enablePythonMarkdownAdmonitions: false,
 		},
 		// 文章页底部的"上次编辑时间"卡片开关
-		showLastModified: true,
+		showLastModified: false,
 		// 文章过期阈值（天数），超过此天数才显示"上次编辑"卡片
 		outdatedThreshold: 30,
 		// 是否开启分享海报生成功能
@@ -241,7 +241,7 @@ export const siteConfig: SiteConfig = {
 		// - "avif": 仅输出 AVIF 格式（最新技术，最小体积，目前兼容性较低）
 		// - "webp": 仅输出 WebP 格式（体积适中，兼容性好）
 		// - "both": 同时输出 AVIF 和 WebP（推荐，浏览器自动选择最佳格式）
-		formats: "webp",
+		formats: "both",
 		// 图片压缩质量 (1-100)，值越低体积越小但质量越差，推荐 70-85
 		quality: 85,
 		// 为特定域名的图片添加 referrerpolicy="no-referrer" 属性
