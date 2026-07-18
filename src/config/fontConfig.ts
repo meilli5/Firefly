@@ -88,7 +88,9 @@ export const fontsList: FontDefinition[] = [
 		options: {
 			variants: [
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Regular.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Regular.ttf",
+					],
 				},
 			],
 		},
