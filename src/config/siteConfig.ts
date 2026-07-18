@@ -15,8 +15,7 @@ export const siteConfig: SiteConfig = {
 	site_url: "https://http://blog.molju.com",
 
 	// 站点描述
-	description:
-		"山溪碎笔。",
+	description: "山溪碎笔。",
 
 	// 站点关键词
 	keywords: [
