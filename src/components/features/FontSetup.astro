@@ -49,6 +49,7 @@ const bannerSubtitleFontVar = fontConfig.enable
 const navbarTitleFontVar = fontConfig.enable
 	? fontConfig.navbarTitleFont || ""
 	: "";
+	const codeFontVar = fontConfig.enable ? fontConfig.codeFont || "" : "";
 ---
 
 <!-- Astro Font API: 自动下载、缓存并生成优化的 @font-face -->
@@ -60,13 +61,14 @@ const navbarTitleFontVar = fontConfig.enable
 ))}
 
 <!-- 区域字体 CSS 变量 + body 字体 -->
-{fontConfig.enable && (bannerTitleFontVar || bannerSubtitleFontVar || navbarTitleFontVar || selectedFontVars.length > 0) && (
+{fontConfig.enable && (bannerTitleFontVar || bannerSubtitleFontVar || codeFontVar || navbarTitleFontVar || selectedFontVars.length > 0) && (
   <style
     set:html={`
-    ${bannerTitleFontVar || bannerSubtitleFontVar || navbarTitleFontVar ? `:root {
-      ${bannerTitleFontVar ? `--font-banner-title: var(${bannerTitleFontVar}, inherit);` : ""}
+    ${bannerTitleFontVar || bannerSubtitleFontVar || navbarTitleFontVar || codeFontVar ? `:root {
+      ${bannerTitleFontVar ? `--font-banner-title: var(${bannerTitleFontVar});` : ""}
       ${bannerSubtitleFontVar ? `--font-banner-subtitle: var(${bannerSubtitleFontVar}, inherit);` : ""}
       ${navbarTitleFontVar ? `--font-navbar-title: var(${navbarTitleFontVar}, inherit);` : ""}
+      ${codeFontVar ? `--font-code: var(${codeFontVar});` : ""}
     }` : ""}
 
     body {
