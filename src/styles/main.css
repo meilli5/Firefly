@@ -9,6 +9,7 @@
 @import './anime-bangumi.css';
 @import './tags.css';
 @import './categories.css';
+@import './waline-overrides.css';
 
 @plugin '@tailwindcss/typography';
 

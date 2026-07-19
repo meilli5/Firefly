@@ -1,0 +1,129 @@
+/* ===== Waline 评论系统外观变量覆盖 ===== */
+/*
+ * 所有 --waline-* CSS 变量均可在此文件中覆盖。
+ * 大部分变量引用项目设计令牌（--primary, --card-bg 等），
+ * 这些令牌会根据亮/暗色模式自动切换，因此 Waline 外观会跟随主题变化。
+ *
+ * 如需微调某个颜色/尺寸，直接修改对应变量即可，无需改动 Waline 组件代码。
+ *
+ * 完整变量参考：https://waline.js.org/reference/client/style.html
+ *
+ * ⚠️ 使用 html:root 而非 :root，因为 Waline CDN 的 CSS 也是 :root，
+ *    且它通过 <link> 在 body 中异步加载，会比这里的 CSS 后到达。
+ *    相同优先级下后者覆盖前者——所以需要多一级 html 标签选择器来提高权重。
+ */
+
+/* ═══════════════════════════════════════════════════════════════
+ * 亮色模式（默认）
+ * ═══════════════════════════════════════════════════════════════ */
+html:root {
+	/* ── 主题色 ──────────────────────────────────── */
+
+	/* 主主题色：按钮、链接、管理员徽章 */
+	--waline-theme-color: var(--primary);
+	/* 悬停/激活态：比主色稍亮 */
+	--waline-active-color: color-mix(in oklch, var(--primary) 80%, white);
+
+	/* ── 文字颜色 ────────────────────────────────── */
+
+	/* 正文颜色 */
+	--waline-color: #444;
+	/* 次要文字（时间戳、提示等） */
+	--waline-light-grey: #999;
+	/* 辅助文字（计数、标签等） */
+	--waline-dark-grey: #666;
+
+	/* ── 背景颜色 ────────────────────────────────── */
+
+	/* 主背景 / 输入框背景 —— 引用卡片背景令牌 */
+	--waline-white: var(--card-bg);
+	/* 评论区整体背景 */
+	--waline-bg-color: var(--card-bg);
+	/* 浅色背景（输入框、信息栏） */
+	--waline-bg-color-light: var(--btn-regular-bg);
+	/* 悬停态背景 */
+	--waline-bg-color-hover: var(--btn-card-bg-hover);
+
+	/* ── 边框 ────────────────────────────────────── */
+
+	/* 边框颜色 —— 引用项目分割线令牌 */
+	--waline-border-color: var(--line-divider);
+	/* 标准边框（变量组合，通常无需修改） */
+	--waline-border: 1px solid var(--waline-border-color);
+
+	/* ── 禁用态 ──────────────────────────────────── */
+
+	/* 禁用元素背景 */
+	--waline-disable-bg-color: var(--muted);
+	/* 禁用元素文字 */
+	--waline-disable-color: #bbb;
+
+	/* ── 代码块 ──────────────────────────────────── */
+
+	/* 评论中代码块背景 */
+	--waline-code-bg-color: var(--codeblock-bg);
+
+	/* ── 引用块 ──────────────────────────────────── */
+
+	/* 评论中引用块背景 */
+	--waline-bq-color: var(--btn-regular-bg);
+
+	/* ── 信息提示 ────────────────────────────────── */
+
+	/* 信息提示区背景 */
+	--waline-info-bg-color: var(--btn-regular-bg);
+	/* 信息提示区文字 */
+	--waline-info-color: #999;
+	/* 信息提示区字号 */
+	--waline-info-font-size: 0.625em;
+
+	/* ── 徽章（管理员标签） ────────────────────────── */
+
+	/* 徽章背景色 */
+	--waline-badge-color: var(--primary);
+	/* 徽章字号 */
+	--waline-badge-font-size: 0.775em;
+
+	/* ── 头像 ────────────────────────────────────── */
+
+	/* 头像尺寸 */
+	--waline-avatar-size: 3.25rem;
+	/* 移动端头像尺寸（自动计算，通常无需修改） */
+	--waline-m-avatar-size: calc(var(--waline-avatar-size) * 9 / 13);
+	/* 头像圆角：50% = 圆形，0 = 方形，可设为任意值 */
+	--waline-avatar-radius: 50%;
+
+	/* ── 字体 ────────────────────────────────────── */
+
+	/* 基础字号 */
+	--waline-font-size: 16px;
+
+	/* ── 阴影 ────────────────────────────────────── */
+
+	/* 评论区整体阴影，默认无 */
+	--waline-box-shadow: none;
+}
+
+/* ═══════════════════════════════════════════════════════════════
+ * 暗色模式
+ *
+ * 注意：以下变量大部分已通过引用项目令牌自动适配暗色，
+ * 此处仅覆盖无法通过令牌自动切换的「硬编码色值」类变量。
+ * ═══════════════════════════════════════════════════════════════ */
+html:root.dark {
+	/* 悬停/激活色改为向黑混合，避免过亮 */
+	--waline-active-color: color-mix(in oklch, var(--primary) 80%, black);
+
+	/* 正文颜色调亮 */
+	--waline-color: #888;
+	/* 次要文字 */
+	--waline-light-grey: #666;
+	/* 辅助文字 */
+	--waline-dark-grey: #999;
+
+	/* 禁用态文字 */
+	--waline-disable-color: #555;
+
+	/* 信息提示区文字 */
+	--waline-info-color: #666;
+}
