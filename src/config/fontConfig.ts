@@ -88,82 +88,114 @@ export const fontsList: FontDefinition[] = [
 		options: {
 			variants: [
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Thin.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Thin.ttf",
+					],
 					weight: "100",
 					style: "normal",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-ThinItalic.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-ThinItalic.ttf",
+					],
 					weight: "100",
 					style: "italic",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-ExtraLight.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-ExtraLight.ttf",
+					],
 					weight: "200",
 					style: "normal",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-ExtraLightItalic.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-ExtraLightItalic.ttf",
+					],
 					weight: "200",
 					style: "italic",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Light.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Light.ttf",
+					],
 					weight: "300",
 					style: "normal",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-LightItalic.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-LightItalic.ttf",
+					],
 					weight: "300",
 					style: "italic",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Regular.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Regular.ttf",
+					],
 					weight: "400",
 					style: "normal",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Italic.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Italic.ttf",
+					],
 					weight: "400",
 					style: "italic",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Medium.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Medium.ttf",
+					],
 					weight: "500",
 					style: "normal",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-MediumItalic.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-MediumItalic.ttf",
+					],
 					weight: "500",
 					style: "italic",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-SemiBold.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-SemiBold.ttf",
+					],
 					weight: "600",
 					style: "normal",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-SemiBoldItalic.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-SemiBoldItalic.ttf",
+					],
 					weight: "600",
 					style: "italic",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Bold.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-Bold.ttf",
+					],
 					weight: "700",
 					style: "normal",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-BoldItalic.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-BoldItalic.ttf",
+					],
 					weight: "700",
 					style: "italic",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-ExtraBold.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-ExtraBold.ttf",
+					],
 					weight: "800",
 					style: "normal",
 				},
 				{
-					src: ["./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-ExtraBoldItalic.ttf"],
+					src: [
+						"./public/assets/fonts/MapleMono-NF-CN/MapleMono-NF-CN-ExtraBoldItalic.ttf",
+					],
 					weight: "800",
 					style: "italic",
 				},
