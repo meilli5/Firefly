@@ -12,7 +12,7 @@ draft: false
 author: molju
 slug: biome-check
 ---
-在使用 Firefly （或者其他Astro模版）部署个人博客时，为了追求高度个性化，我们时常会对配置文件作出大幅度修改。然而随之而来的问题便是提交推送后 Github 上 Code Quality 的 Action 常常会因不规范的更改而 Fail，尤其是 Run Biome 这一步。![image.png](https://img.molju.com/file/1784535491477_image.png)
+在使用 Firefly （或者其他 Astro 模版）部署个人博客时，为了追求高度个性化，我们时常会对配置文件作出大幅度修改。然而随之而来的问题便是提交推送后 Github 上 Code Quality 的 Action 常常会因不规范的更改而 Fail，尤其是 Run Biome 这一步。![image.png](https://img.molju.com/file/1784535491477_image.png)
 此时我们当然可以点击右上角 `Fix with Copilot` ，然而 Github 实在抽风，Education 给的 Pro 优惠也越来越不够用，额度越来越少，因此学会自己解决是十分必要的。
 ## 最简单的办法
 打开本地克隆的仓库，在终端运行以下两行代码即可：
